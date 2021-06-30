@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="css/simple.css">
+<title>Bit-blasting: QF_BV to SAT</title>
+</head>
+<body>
+  <div class="container">
+    <h1>CNF Benchmarks from SMT-LIB QF_BV</h1>
+    
+    <hr>
+    <p>
+    The <a href="CNFs.zip">zip file</a> below contains 15447 SAT
+    problems in DIMACS that were produced by <em>bit-blasting</em> the
+    <a href="https://clc-gitlab.cs.uiowa.edu:2443/SMT-LIB-benchmarks/QF_BV.git">
+      QF_BV</a> benchmarks of SMT-LIB.
+    </p>
+
+    <p>
+      There are 41696 QF_BV problems in SMT-LIB. We converted them to CNF
+      using <a href="https://yices.csl.sri.com">Yices 2</a>.
+    </p>
+    <p>
+      Yices 2 solves 18940 problems by preprocessing and
+      simplification. We converted the rest (22756 problems) to CNF.
+      Out of these CNF problems, we removed trivial benchmarks and duplicates.
+      There were
+      <ul class="square">
+	<li>325 empty formulas (trivially SAT)</li>
+	<li>2695 formulas that contain the empty clause (trivially UNSAT)</li>
+	<li>4286 duplicates.</li>
+      </ul>
+      This leaves 15450 CNF files. Three of them are very large (more
+      than 5GB). This <a href="CNFs.zip">zip file</a> contains the
+      remaining CNF files, compressed with xz. The file is approximately 7GB.
+    </p>
+
+    <hr>
+    <p>
+      New versions (produced by newer versions of Yices 2).
+      <ul class="square">
+	<li> <a href="CNFs-16c3cb92.zip">CNFs-16c3cb92.zip</a> (7GB)
+	<li> <a href="CNFs-b36f92fb.zip">CNFs-b36f92fb.zip</a> (4.4GB)
+      </ul>
+    </p>
+
+    <hr>
+  </div>
+</body>
+
+    
